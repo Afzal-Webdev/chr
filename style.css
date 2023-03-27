@@ -1,0 +1,282 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* for Chrome, Safari, and Opera */
+}
+
+*,
+::before,
+::after {
+    margin: 0px;
+    padding: 0px;
+}
+
+.stars a:hover {
+    scale: 1.2;
+}
+
+.main-container {
+    width: 100%;
+
+    background-color: #f2f2f2;
+    margin-inline: auto;
+}
+
+.homepage {
+
+    margin-left: 8rem;
+
+    height: calc(100vh - 150px);
+    background-image: url("assets/images/bear.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+    mix-blend-mode: darken;
+}
+.homepage.thanks{
+    margin-left: 8rem;
+
+    height: calc(100vh - 150px);
+    background-image: url("assets/images/Website-People.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+    mix-blend-mode: darken;
+
+}
+.homepage {
+    display: flex;
+}
+
+.homepage :is(article, div) {
+    flex-grow: 1;
+}
+
+.left-side {
+    width: 40%
+}
+
+.right-side {
+    width: 60%;
+}
+
+.logo {
+    margin-block: 4rem 6rem;
+}
+
+.header-logo {
+    height: 37px;
+    width: auto;
+}
+
+.inner-heading h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    color: #081E52;
+    line-height: 20px;
+}
+
+.inner-heading h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0;
+    color: #FC1515;
+    line-height: 20px;
+}
+
+.inner-heading {
+    margin-bottom: 30px;
+}
+
+.rating-box-main label {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0;
+    color: #081E52;
+    line-height: 18px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.rating-box-main .stars {
+
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+
+}
+
+.rating-box-main .stars a {
+    text-decoration: none;
+    width: 28px;
+    height: 26.72px;
+    transition: all 0.3s linear;
+}
+
+.review-footer {
+    padding-block: 50px;
+    background-color: #000;
+    padding-inline: 8rem;
+    display: flex;
+    gap: 3rem;
+    bottom: 0px;
+
+    position: fixed;
+    bottom: 0px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* .footer-texts.first {
+    margin-inline: auto
+} */
+
+
+
+.footer-logo {
+    width: 140px;
+    height: 37px;
+}
+
+.footer-texts {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0;
+    color: #999;
+    line-height: 18px;
+    /* max-width: 50%; */
+}
+
+
+/* Thanks Page CSS */
+
+.inner-heading.thanks h1{
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    color: #081E52;
+    line-height: 42px;
+}
+
+.inner-heading.thanks h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+    color: #081E52;
+    line-height: 32px;
+}
+.inner-heading.thanks :is(h2,h3,h4){text-transform: none;}
+
+
+
+@media only screen and (max-width: 992px) {
+
+    .inner-heading.thanks :is(h1,h3)>br{display: none;}
+
+
+    /* .footer-texts{max-width: unset;} */
+    .homepage {
+        margin-left: 0rem;
+        padding-left: 2rem;
+        background-size: 70% auto;
+        background-position: right top;
+    }
+    .homepage.thanks {
+        margin-left: 0rem;
+        padding-inline: 2rem;
+        background-size: 70% auto;
+        background-position: right top;
+    }
+
+    .review-footer {
+        padding-inline: 2rem;
+    }
+
+    .rating-box-main .stars {
+        width: 60%;
+    }
+    .homepage.thanks {
+        margin-left: 0rem;
+        padding-left: 2rem;
+        background-size: 70% auto;
+        background-position: right top;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .homepage {
+        background-image: unset;
+        height: unset;
+        flex-direction: column;
+    }
+
+    .right-side {
+        content: url("assets/images/bear.jpg");
+        background-size: cover;
+    }
+    .right-side.thanks {
+        content: url("assets/images/Website-People.jpg");
+        background-size: cover;
+    }
+
+    .review-footer {
+        position: static;
+        bottom: unset;
+        /* max-width: 992px; */
+        width: unset;
+        flex-direction: column;
+        padding-inline: 2rem;
+        gap: 1rem;
+    }
+    .homepage.thanks {
+        background-image: unset;
+        height: unset;
+        flex-direction: column;
+    }
+
+
+
+    .left-side {
+        width: 100%;
+    }
+
+    .right-side {
+        width: 100%;
+    }
+
+    .logo {
+        margin-block: 2rem 3.5rem;
+    }
+
+    .logo {
+        margin-block: 2rem 3.5rem;
+    }
+
+    /* Thanks */
+    .inner-heading.thanks h1{
+        font-size: 24px;line-height: 28px;
+    }
+    .inner-heading.thanks h3{
+        font-size: 16px;
+        line-height:24px ;
+    }
+}
