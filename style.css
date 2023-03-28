@@ -226,9 +226,10 @@ body::-webkit-scrollbar {
 @media only screen and (max-width: 900px){
 
 
-    .homepage{
+    .homepage,.homepage.thanks{
         background-position:right bottom;
     }
+    
     .left-side{width: 70%;}
 
 }
@@ -256,6 +257,11 @@ body::-webkit-scrollbar {
         flex-direction: column;
         padding-inline: 2rem;
         gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-texts{
+        width: 100%;
     }
     .homepage.thanks {
         background-image: unset;
